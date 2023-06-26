@@ -1,0 +1,126 @@
+.page{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    width: fit-content;
+    block-size: fit-content;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.texto{
+    &__title {
+        font-family:'Times New Roman', Times, serif;
+        font-weight: 700;
+        margin: 40px 0 20px 0;
+      }
+      &__introducion {
+        &__subtitle {
+          font-size: 18px;
+        }
+        &__descripcion {
+          font-size: 14px;
+          margin: 0;
+          padding: 0px 30px 30px 0px;
+        }
+      }
+}
+
+.team{
+    display: flex;
+    flex-wrap: wrap;
+
+    &__person{
+
+        margin: 25px 15px;
+        width: 148px;
+
+        &__name {
+            margin: 5px 0;
+            font-weight: 600;
+            font-size: 16px;
+        }
+    }
+    .--abajo {
+        transform: translateY(50px);
+    }
+}
+
+.team__person__content{
+    display: flex;
+    &__foto {
+        max-width: 90%;
+      }
+      &__cargo {
+        font-size: 10px;
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        margin-block-start: 0;
+        margin-block-end: 0;
+      }
+}
+
+@media (max-width: 374px) {
+    .team{
+        display: block;
+        .--abajo {
+            transform: translateY(0px);
+          }
+    }
+  }
+
+  @media (min-width: 375px) {
+    .page{
+      max-width: 360px;
+    }
+  }
+
+  @media (min-width: 890px) {
+    .page {
+        max-width: 890px;
+    }
+   
+    .texto {
+      display: flex;
+      flex-direction: row;
+      margin: 60px 5px;
+  
+      &__title {
+        margin: 5px;
+        flex-basis: 50%;
+      }
+  
+      &__introducion {
+    
+        flex-basis: 40%;
+  
+        &__subtitle {
+          margin-top: 2px;
+          margin-block-end: 0;
+        }
+        &__descripcion {
+          margin-top: 5px;
+        }
+      }
+    }
+
+    .team {
+        &__person {
+          width: 100%;
+          max-width: 250px;
+          margin: 40px 20px;
+        }
+    
+        .--abajo {
+          width: 100%;
+          max-width: 250px;
+          margin: 40px 20px;
+          transform: none;
+        }
+    
+        .--bajarcentro {
+          transform: translateY(70px);
+        }
+      }
+}
